@@ -11,14 +11,14 @@ DARK BLUE: #1D3557
 body {
     margin: 0 auto;
     text-align: center;
-    width: 720px;
+    max-width: 720px;
     background-color: #E5E5E5;
     font-family: 'Poppins', sans-serif;
 }
 
 /* Hero Section */
 
-header {
+.hero-section {
     background:url('images/antwerp.jpg') no-repeat center ;
     background-size: cover;
     height: 343px;
@@ -28,17 +28,17 @@ header {
     justify-content: center;
     align-items: center;
     margin: 0px;
-
+    transition: 0.5s;
 }
 
-header:hover {
+.hero-section:hover {
     background-image: url('images/antwerp-night.jfif');
-    transition: 0.5s;
+    
 }
 
 .hero-title {
     background: #1D3557;
-    padding: 3px 12px 5px 12px;
+    padding: 6px 12px 6px 12px;
     border-radius: 10px;
     margin-bottom: 0px;
 }
@@ -46,7 +46,7 @@ header:hover {
 .hero-city {
     margin-top: 16px;
     background: #457B9D;
-    padding: 5px 28px 8px 29px;
+    padding: 8px 18px 8px 18px;
     border-radius: 10px;
     width:412px;
 }
@@ -63,6 +63,7 @@ img {
     background-color: #F1FAEE;
     margin: 0px;
     padding-bottom: 58px;
+    color:#1D3557;
 }
 
 .activities-title {
@@ -84,25 +85,20 @@ img {
 }
 
 
-.activities-chocolate, .activities-station, .activities-beer {
+.activity {
     margin-top: 29px;
     width: 210px;
     height: 255px;
 }
 
+.chocolate-img, .station-img, .beer-img{
+    /* transition: 0.2s linear; */
+    transition: 1s;
+}
+
 .chocolate-img:hover, .station-img:hover, .beer-img:hover {
-    -webkit-animation-name: rotate;
-    -webkit-animation-duration:1s;
-    -webkit-animation-iteration-count:1;
-    -webkit-animation-timing-function:linear; 
-
-    -moz-animation-name: rotate;
-    -moz-animation-duration:1s;
-    -moz-animation-iteration-count:1;
-    -moz-animation-timing-function:linear; 
-    transform: rotateY(180deg);
-    animation-fill-mode: forwards;
-
+    /* transform: scale(110%); */
+    transform: rotate3d(0, 1, 0, 180deg);
 }
 
 /* Guide Section */
@@ -110,6 +106,7 @@ img {
 .guide-section{
     background-color: #fff;
     padding:50px 0px;
+    color:#1D3557;
  
 }
 
@@ -117,6 +114,7 @@ img {
     width: 400px;
     Height:294px;
     margin: 0 auto;
+    padding-right: 40px;
     display: flex;
     background-color: #A8DADC;
     justify-content: space-around;
@@ -126,8 +124,6 @@ img {
 }
 
 .guide-img {
-    /* light blue : B0C8FF   fluo green:CFF928   dark purple; 522AAB   Magenta: EC00D7 */
-    /* background: linear-gradient(to right, #B0C8FF, #CFF928, #522AAB, #EC00D7); */
     padding: 7px;
     border-radius: 20px;
     margin-left: 35px;
